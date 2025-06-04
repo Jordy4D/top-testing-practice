@@ -1,16 +1,16 @@
 export function capitalize(str) {
-  // implementation
+  return str.at(0).toUpperCase().concat(str.slice(1))
 }
 
 export function reverseString(str) {
-  // implementation
+  return str.split("").reverse().join("")
 }
 
 export const calculator = {
-  add(a, b) { /* implementation */ },
-  subtract(a, b) { /* implementation */ },
-  divide(a, b) { /* implementation */ },
-  multiply(a, b) { /* implementation */ }
+  add(a, b) { return a + b },
+  subtract(a, b) { return a - b },
+  divide(a, b) { return (a / b) },
+  multiply(a, b) { return (a * b) }
 };
 
 export function caesarCipher(str, shift) {
