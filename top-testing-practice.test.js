@@ -21,3 +21,8 @@ test('caesarCipher returns a string with shifted letters', () => {
   expect(caesarCipher("DogGy!", 20)).toBe("XiaAs!")
 
 })
+
+test('analyzeArray returns the average, minimum, maximum, and length of array', () => {
+  expect(analyzeArray([1,8,3,4,2,6])).toMatchObject({average: 4, min: 1, max: 8, length: 6})
+  expect(analyzeArray([10,81,35,43,27,16])).toMatchObject({average: 35, min: 10, max: 81, length: 6})
+})

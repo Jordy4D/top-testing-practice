@@ -32,5 +32,15 @@ export function caesarCipher(str, shift) {
 }
 
 export function analyzeArray(arr) {
-  // implementation
+
+  const minMax = arr.sort(function(a, b){return a - b})
+  const sum = arr.reduce((a, b) => a + b, 0)
+
+
+  return { average: Math.round(sum / arr.length),
+   min: minMax[0],
+   max: minMax[minMax.length - 1],
+   length: arr.length
+}
+
 }
