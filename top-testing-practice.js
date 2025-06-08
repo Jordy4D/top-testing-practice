@@ -14,7 +14,15 @@ export const calculator = {
 };
 
 export function caesarCipher(str, shift) {
-  // implementation
+  const alphabetSet = ('abcdefghijklmnopqrstuvwxyz').split("");
+  const strSet = (str).split("")
+  const newStr = []
+  strSet.forEach((letter) => {
+    const temp = alphabetSet.indexOf(letter)
+    newStr.push( (temp + 1) + shift)
+  })
+  console.log(newStr)
+
 }
 
 export function analyzeArray(arr) {
