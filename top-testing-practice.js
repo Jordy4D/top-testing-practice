@@ -14,14 +14,20 @@ export const calculator = {
 };
 
 export function caesarCipher(str, shift) {
-  const alphabetSet = ('abcdefghijklmnopqrstuvwxyz').split("");
-  const strSet = (str).split("")
+  const strSet = str.split("")
   const newStr = []
   strSet.forEach((letter) => {
-    const temp = alphabetSet.indexOf(letter)
-    newStr.push( (temp + 1) + shift)
+    const l = letter.charCodeAt(0)
+    const base = letter === letter.toLowerCase() ? 97 : 65;
+
+    if (l < 65 || l > 122) {
+      newStr.push(letter)
+    } else {
+      newStr.push(String.fromCharCode(((letter.charCodeAt(0) - base + shift) % 26) + base))
+    }    
+  
   })
-  console.log(newStr)
+  return newStr.join("")
 
 }
 
